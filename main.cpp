@@ -1,4 +1,5 @@
 #include "dominion.h"
+#include "player_impl.h"
 
 #include <iostream>
 
