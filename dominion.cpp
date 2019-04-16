@@ -223,11 +223,15 @@ void Player::buy_card(string title)
 
   const Card* card = get_card(title);
 
-  if(supply->card_piles[card] > 0 && card->cost <= purse)
+  if(buys > 0 && card->cost <= purse && supply->card_piles[card] > 0)
   {
     cout << "Buying card: " << title << endl;
-    supply->pop_card(card);
+
+    buys--;
+
     purse -= card->cost;
+
+    supply->pop_card(card);
     discard_pile.push_back(card);
   }
 }
@@ -311,8 +315,10 @@ void AutoPlayer::take_turn_impl()
     {
       buy_card("Gold");
     }
-
-    buy_card("Silver");
+    else
+    {
+      buy_card("Silver");
+    }
   }
 }
 
