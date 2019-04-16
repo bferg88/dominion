@@ -1,0 +1,42 @@
+Monarch - Dominion Simulator
+
+Author: Bryant Ferguson
+
+Dependencies: c++11, c++stl, make
+Build: "make"
+
+Description:
+This is some basic framework (incomplete implementation) for a Dominion 
+simulator a physical card game designed by Donald X. Vaccarino.
+
+Dominion is a deck building card game for 2 - 4 players.
+
+From the rule book:
+"You are a monarch, like your parents before you, a ruler of a small pleasant
+kingdom of rivers and evergreens. Unlike your parents, however, you have hopes
+and dreams! You want a bigger and more pleasant kingdom, with more rivers and
+a wider variety of trees. You want a Dominion!"
+
+Basic overview of game play:
+Players start with a deck of 10 cards, drawing 5 of them during game setup
+and after each turn. During the game, they will collect treasure and kingdom
+cards from a pool of cards to increase the utility of their deck (and "dominion"). 
+The game ends when all provinces have been collected, or 3 piles of pool cards
+have been exhausted. Whoever has the most points from victory points on
+cards in their deck, wins the game.
+
+For information about the game:
+https://en.wikipedia.org/wiki/Dominion_(card_game)
+
+
+Goal of this project:
+* Create an extensible simulator with interchangeable player implementations.
+
+Future goals:
+* Automatic player with file configurable strategies. (not hard coded)
+* AI player with machine learning.
+* Implementation of all cards and mechanics of the Dominon.  
+* A full human player interface.
+* Create interface to an online implementation so that it may be
+  programatically driven by the player implementations from this project.
+
