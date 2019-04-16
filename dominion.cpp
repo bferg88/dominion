@@ -43,14 +43,14 @@ void Game::start()
     Player* player = players[turn_counter % player_count];
     player->take_turn();
 
-    if(++turn_counter >= 150)
+    if(++turn_counter >= 100)
     {
       cout << "Stopping Game: Too many turns (" << turn_counter << ")" << endl;
       break;
     }
   }
 
-  cout << "Game Over!" << endl << endl;
+  cout << "Game Over (in " << turn_counter << " turns)!" << endl << endl;
 
   for(Player* player : players)
   {
@@ -203,9 +203,11 @@ void Player::play_action_card(string )
 {
   if(buy_phase) return;
   //todo: implement this
-  // check that card is in hand
-  // move card to play area
-  // do card stuff
+  // check if enough actions
+    // decrement actions
+    // check that card is in hand
+    // move card to play area
+    // do card stuff
 }
 
 void Player::start_buy_phase()
