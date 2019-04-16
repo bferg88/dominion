@@ -34,22 +34,22 @@ class Card
 
     // required attributes
     string title;
-    int cost;
+    int cost = 0;
     vector<string> type;
 
     // trivial card abilities
-    int card_increment;
-    int action_increment;
-    int buy_increment;
-    int coin_increment;
+    int card_increment = 0;
+    int action_increment = 0;
+    int buy_increment = 0;
+    int coin_increment = 0;
 
     // special card values
-    int treasure_value;
-    int victory_points;
+    int treasure_value = 0;
+    int victory_points = 0;
 
     // non-trivial card ability text and implementation
     string ability_text;
-    void (*ability_function_ptr)(Game);
+    void (*ability_function_ptr)(Game) = 0;
 };
 
 
