@@ -43,7 +43,7 @@ Future goals:
 * Configurable logging
 * A full human player interface.
 * Create interface to an online implementation so that it may be
-  programatically driven by the player implementations from this project.
+  programmatically driven by the player implementations from this project.
 
 Other thoughts:
 * File configurable card definitions would be desireable, but due to the 
