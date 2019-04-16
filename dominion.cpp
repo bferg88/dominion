@@ -123,7 +123,6 @@ void Supply::setup(vector<Player*> players)
   card_piles[get_card("Curse")] = curse_count;
 
   // kingdom cards
-  // todo: allow randomize or selection of specific Kingdom cards
   for(string title : {"Village", "Market", "Smithy"})
   {
     card_piles[get_card(title)] = kingdom_card_count;
