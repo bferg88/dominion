@@ -37,10 +37,18 @@ Goal of this project:
 
 Future goals:
 * Automatic player with file configurable strategies. (not hard coded)
-* Configurable logging
 * AI player with machine learning.
 * Implementation of all cards and mechanics of the Dominon.  
+* Configurable logging
 * A full human player interface.
 * Create interface to an online implementation so that it may be
   programatically driven by the player implementations from this project.
+
+Other thoughts:
+* File configurable cards would be desireable, but due to the complex
+  effects of many cards on the game state and the compiled nature of 
+  C++ there would be significant trade-offs and probable performance
+  degradation. Since one of the design goals is fast simulation
+  it was decided to implement card definitions in compiled source.
+  
 
