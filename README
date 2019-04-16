@@ -4,6 +4,7 @@ Author: Bryant Ferguson
 
 Dependencies: c++11, c++stl, make
 Build: "make"
+Run: "./monarch"
 
 Description:
 This is some basic framework (incomplete implementation) for a Dominion 
@@ -30,10 +31,13 @@ https://en.wikipedia.org/wiki/Dominion_(card_game)
 
 
 Goal of this project:
-* Create an extensible simulator with interchangeable player implementations.
+* Create an extensible simulator with interchangeable player implementations
+  in a language (C++) that allows fast simulation of games played by a
+  programmed player (AI?).
 
 Future goals:
 * Automatic player with file configurable strategies. (not hard coded)
+* Configurable logging
 * AI player with machine learning.
 * Implementation of all cards and mechanics of the Dominon.  
 * A full human player interface.
