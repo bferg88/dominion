@@ -1,7 +1,6 @@
-#include "dominion.h"
+#include "cards.h"
 
 #include <unordered_map>
-#include <iostream>
 
 namespace Dominion {
 

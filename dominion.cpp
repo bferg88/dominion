@@ -1,4 +1,5 @@
 #include "dominion.h"
+#include "cards.h"
 #include <algorithm>
 
 
@@ -328,7 +329,6 @@ void HumanPlayer::take_turn_impl()
 }
 
 
-/* Function definitions */
 
 void shuffle_cards(vector<const Card*>& cards)
 {
