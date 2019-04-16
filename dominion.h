@@ -86,9 +86,6 @@ class Card
 /*
  * Abstract implementation of Player is designed to be a base class
  * that could  be immplemented as human, AI, etc.
- *
- * todo: 
- * Validation: no playing cards, once buy phase begins
  */
 class Player
 {
