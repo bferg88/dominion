@@ -189,6 +189,11 @@ int Player::get_buys()
   return buys;
 }
 
+const vector<const Card*>& Player::get_hand()
+{
+  return hand;
+}
+
 int Player::count_treasure()
 {
   int sum = 0;

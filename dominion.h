@@ -67,6 +67,7 @@ class Player
      * at which point the value of any present treasure
      * cards is added to purse. This happens when 
      * start_buy_phase() is called.*/
+    const vector<const Card*>& get_hand();
     int count_treasure();
     
     /* Player turn overview:
