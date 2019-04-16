@@ -28,7 +28,7 @@ class Supply
 
   private:
     void setup(vector<Player*> players);
-    bool game_over();
+    bool is_game_over();
     int piles_empty = 0;
     friend class Game;
 };

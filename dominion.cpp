@@ -38,7 +38,7 @@ void Game::start()
 
   int player_count = players.size();
   int turn_counter = 0;
-  while(!supply.game_over())
+  while(!supply.is_game_over())
   {
     Player* player = players[turn_counter % player_count];
     player->take_turn();
@@ -141,7 +141,7 @@ void Supply::pop_card(const Card* card)
   }
 }
 
-bool Supply::game_over()
+bool Supply::is_game_over()
 {
   if(piles_empty >= 3)
   {
