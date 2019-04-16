@@ -10,7 +10,6 @@ int main() {
 
   // make instance of game
   Dominion::Game game;
-  cout << "Game created..." << endl;
 
   // make players
   Dominion::AutoPlayer player1("Adam");
