@@ -8,8 +8,6 @@
 
 namespace Dominion {
 
-using namespace std;
-
 class Player;
 class Card;
 
@@ -18,7 +16,7 @@ class Supply
   /* card_piles holds pairs representing the cards
    * available in the supply and their remaining quantity */
   public:
-    map<const Card*, int> card_piles;
+    std::map<const Card*, int> card_piles;
     void pop_card(const Card*);
     /* if security were of utmost importance, I would need to create a
      * read-only map for card_piles, but I'm choosing to trust Player
@@ -27,7 +25,7 @@ class Supply
      */
 
   private:
-    void setup(vector<Player*> players);
+    void setup(std::vector<Player*> players);
     bool is_game_over();
     int piles_empty = 0;
     friend class Game;
@@ -43,7 +41,7 @@ class Game
 
   private:
     Supply supply;
-    vector<Player*> players;
+    std::vector<Player*> players;
 };
 
 
@@ -55,7 +53,7 @@ class Player
 {
   public:
     Player(); 
-    Player(string name);
+    Player(std::string name);
 
     Supply* supply;
 
@@ -67,7 +65,7 @@ class Player
      * at which point the value of any present treasure
      * cards is added to purse. This happens when 
      * start_buy_phase() is called.*/
-    const vector<const Card*>& get_hand();
+    const std::vector<const Card*>& get_hand();
     int count_treasure();
     
     /* Player turn overview:
@@ -81,21 +79,21 @@ class Player
      */
 
     // functions necessary to take complete tur
-    void play_action_card(string title); //during Action phase
+    void play_action_card(std::string title); //during Action phase
     void start_buy_phase(); //start Buy phase
-    void buy_card(string title); // during Buy phase
+    void buy_card(std::string title); // during Buy phase
 
 
   protected:
     virtual void take_turn_impl() = 0;
   
   private:
-    string name="N/A"; //player name, used for user feedback
+    std::string name="N/A"; //player name, used for user feedback
 
-    vector<const Card*> deck;    // top card of deck is last element
-    vector<const Card*> hand;    // order is irrelevant
-    vector<const Card*> play_area; // cards activated on turn
-    vector<const Card*> discard_pile; // top card of discard pile is last element
+    std::vector<const Card*> deck;    // top card of deck is last element
+    std::vector<const Card*> hand;    // order is irrelevant
+    std::vector<const Card*> play_area; // cards activated on turn
+    std::vector<const Card*> discard_pile; // top card of discard pile is last element
 
     void draw_card();
     void draw_cards(int num_cards=5);
@@ -113,10 +111,8 @@ class Player
 
 
 /* Functions for doing useful things */
-void shuffle_cards(vector<const Card*>& cards);
-
+void shuffle_cards(std::vector<const Card*>& cards);
 
 }//namespace Dominion
-
 
 #endif

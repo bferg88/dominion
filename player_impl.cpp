@@ -1,6 +1,8 @@
 #include "player_impl.h"
 
-using namespace std;
+using std::cout;
+using std::endl;
+using std::string;
 
 namespace Dominion {
 
@@ -41,7 +43,6 @@ void HumanPlayer::take_turn_impl()
 {
   //todo: implement command line interface for human player
 }
-
 
 }//namespace Dominion
 

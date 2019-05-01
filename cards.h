@@ -6,8 +6,6 @@
 
 namespace Dominion {
 
-using namespace std;
-
 class Game;
 class Player;
 
@@ -21,12 +19,12 @@ class Card
    */
   public:
     Card();
-    Card(string title, int cost);
+    Card(std::string title, int cost);
 
     // required attributes
-    string title;
+    std::string title;
     int cost = 0;
-    vector<string> type;
+    std::vector<std::string> type;
 
     // trivial card abilities
     int card_increment = 0;
@@ -39,14 +37,13 @@ class Card
     int victory_points = 0;
 
     // non-trivial card ability text and implementation
-    string ability_text;
+    std::string ability_text;
     void (*ability_function_ptr)(Game*, Player*) = 0;
 };
 
 //access card definitions by constant pointer
-const Card* get_card(string title);
+const Card* get_card(std::string title);
 
 }//namespace Dominion
-
 
 #endif

@@ -2,9 +2,10 @@
 
 #include <unordered_map>
 
-namespace Dominion {
+using std::vector;
+using std::string;
 
-using namespace std;
+namespace Dominion {
 
 /* Card constructor definitions */
 Card::Card() {}
@@ -97,7 +98,7 @@ vector<Card> make_cards()
  */
 const Card* get_card(string title)
 {
-  static unordered_map<string, const Card> card_map;
+  static std::unordered_map<string, const Card> card_map;
   static bool card_map_initialized = false;
 
   if(!card_map_initialized) 
@@ -112,6 +113,5 @@ const Card* get_card(string title)
 
   return &card_map[title];
 }
-
 
 }//namespace Dominion

@@ -1,9 +1,13 @@
 #include "dominion.h"
 #include "cards.h"
+
 #include <random>
 #include <algorithm>
 
-using namespace std;
+using std::cout;
+using std::endl;
+using std::vector;
+using std::string;
 
 namespace Dominion {
 
@@ -315,14 +319,13 @@ void shuffle_cards(vector<const Card*>& cards)
 //  #define REPEATABLE_SHUFFLE
 
   #ifdef REPEATABLE_SHUFFLE
-  static auto rng = default_random_engine();
+  static auto rng = std::default_random_engine();
   #else
-  static auto rng = default_random_engine(random_device()());
+  static auto rng = std::default_random_engine(std::random_device()());
   #endif
 
-  shuffle(cards.begin(), cards.end(), rng);
+  std::shuffle(cards.begin(), cards.end(), rng);
 }
 
 }//namespace Dominion
-
 
