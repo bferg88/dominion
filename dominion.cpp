@@ -1,7 +1,7 @@
 #include "dominion.h"
 #include "cards.h"
+#include <random>
 #include <algorithm>
-
 
 using namespace std;
 
