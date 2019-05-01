@@ -16,5 +16,8 @@ cards.o: cards.cpp cards.h
 player_impl.o: player_impl.cpp player_impl.h dominion.h
 	g++ $(FLAGS) -c player_impl.cpp
 
+zip:
+	git archive -o dominion.zip --prefix=dominion/ HEAD
+
 clean:
-	rm -f *.o monarch  
+	rm -f *.o monarch dominion.zip
